@@ -1,0 +1,9 @@
+C:\Websites\dnndev.me\bin\Memeometer.dll.config
+C:\Websites\dnndev.me\bin\Memeometer.dll
+C:\Websites\dnndev.me\bin\Memeometer.pdb
+C:\Websites\dnndev.me\DesktopModules\MVC\Memeometer\obj\Release\Mr.Modules.Memeometer.App_LocalResources.Settings.resources
+C:\Websites\dnndev.me\DesktopModules\MVC\Memeometer\obj\Release\Memeometer.csproj.GenerateResource.cache
+C:\Websites\dnndev.me\DesktopModules\MVC\Memeometer\obj\Release\Memeometer.csproj.CoreCompileInputs.cache
+C:\Websites\dnndev.me\DesktopModules\MVC\Memeometer\obj\Release\Memeometer.csproj.CopyComplete
+C:\Websites\dnndev.me\DesktopModules\MVC\Memeometer\obj\Release\Memeometer.dll
+C:\Websites\dnndev.me\DesktopModules\MVC\Memeometer\obj\Release\Memeometer.pdb

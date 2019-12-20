@@ -1,0 +1,75 @@
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<Mr.Modules.Memeometer.Models.Item>>
+
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+
+
+<div id="Items-@Dnn.ModuleContext.ModuleId">
+    @if (Model.Count() == 0)
+    {
+        <p>No meme's submited *SadPanda*</p>
+    }
+    else
+    {
+        <ul class="tm_tl">
+            @foreach (var item in Model)
+            {
+                <li class="tm_t">
+                    <h3>@item.ItemName</h3>
+                    <div class="upvote">
+
+
+
+                        @Html.ActionLink(
+                            "Upvote",                                                  // linkText
+                            "UpvoteRating",                                    // actionName
+                            "Item",                                                   // controllerName
+                            new {                                                     // routeValues
+                                item = item
+                            },
+                            null                                                      // htmlAttributes
+                        )
+
+
+                    </div>
+                    <div class="tm_td">
+                        <img src="~/desktopmodules/MVC/Memeometer/Memes/@item.ImagePath" style="float:left; width:220px; height:auto;" />
+
+                    </div>
+                    <div class="rating">
+                        Rating:
+                    </div>
+                    @{
+                        if (Dnn.ModuleContext.IsEditable)
+                        {
+                            <div>
+                                <a href="@Url.Action("Edit", "Item", new {ctl = "Edit", itemId = item.ItemId})">@Dnn.LocalizeString("EditItem")</a>
+                                <a href="@Url.Action("Delete", "Item", new {itemId = item.ItemId})">@Dnn.LocalizeString("DeleteItem")</a>
+                            </div>
+                        }
+                    }
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+
+<script>
+    /*$(".upvoteBtn").on('click', function (e) {
+        console.log('clicked');
+        e.preventDefault();
+        $.ajax({
+
+            url: $(this).attr("href"), // comma here instead of semicolon
+            success: function () {
+                console.log("Upvote Added");  // or any other indication if you want to show
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log("Status: " + textStatus + "  Error: " + errorThrown);
+            }
+
+        });
+
+    });*/
+</script>
